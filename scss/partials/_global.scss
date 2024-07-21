@@ -1,0 +1,83 @@
+@use "./variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  background-color: $light-gray;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  font-size: 2.8125rem;
+}
+
+h3 {
+  font-size: 2.0625rem;
+  font-weight: 300;
+}
+
+.icon {
+  width: 3.125rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+.p-italic {
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.header__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: $nitro-pink;
+}
+.header__company-name {
+  margin-right: 1.25rem;
+  font-size: 2.5rem;
+  padding-right: 2rem;
+  display: flex;
+  margin-top: 1rem;
+  margin-right: auto;
+}
+.header__company-link {
+  text-decoration: none;
+  color: inherit;
+}
+.header__nav {
+  margin-left: auto;
+}
+.header__nav-list {
+  display: flex;
+  list-style-type: none;
+}
+.header__nav-item {
+  margin-right: 2rem;
+}
+.header__nav-item a {
+  text-decoration: none;
+  color: $graphite;
+}
+.header__nav-item a:hover {
+  color: $button-hover;
+}
+.header__nav-item a.active {
+  color: $nitro-blue;
+  font-weight: bold;
+}

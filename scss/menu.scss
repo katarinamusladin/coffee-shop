@@ -1,0 +1,111 @@
+@use "./partials/variables" as *;
+@use "./partials/global" as *;
+
+.menu__section {
+  &--hot-drinks,
+  &--cold-drinks,
+  &--pastries {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+
+    &.h2 {
+      margin-bottom: 30px;
+    }
+
+    &.h3 {
+      margin-bottom: 10px;
+    }
+
+    div {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &--hot-drinks,
+  &--pastries {
+    background-color: $nitro-pink;
+  }
+
+  &--cold-drinks {
+    background-color: $light-gray;
+  }
+}
+
+.price {
+  text-align: center;
+  color: $nitro-blue;
+  margin-top: 0.625rem;
+}
+
+.p-italic {
+  font-style: italic;
+}
+
+/*COFFE IMAGE AND MENU TITLE*/
+.menu-background {
+  background-image: url("../assets/images/coffee-circle.jpg");
+  width: 100%;
+  height: 43.75rem;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    font-size: 3.125rem;
+    color: $white;
+    font-weight: 300;
+    background-color: $graphite;
+    width: 18.75rem;
+    height: 12.5rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      border: 0.25rem solid $nitro-blue;
+      position: absolute;
+      top: -0.9375rem;
+      left: -0.9375rem;
+      right: 0.9375rem;
+      bottom: 0.9375rem;
+      pointer-events: none;
+    }
+  }
+}
+
+.menu {
+  background-color: $graphite;
+  width: 100%;
+  margin: 0;
+  height: 5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__item {
+    color: $white;
+    padding: 0 15px;
+    position: relative;
+    border-left: 4px solid $nitro-blue;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    margin: 0 0.625rem;
+  }
+}
