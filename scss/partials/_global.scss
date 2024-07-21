@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 * {
   box-sizing: border-box;
@@ -15,13 +16,11 @@ body {
 
 h1,
 h2 {
-  font-weight: 300;
-  font-size: 2.8125rem;
+  @include fontSize-weight(2.8125rem, 300);
 }
 
 h3 {
-  font-size: 2.0625rem;
-  font-weight: 300;
+  @include fontSize-weight(2.0625rem, 300);
 }
 
 .icon {
@@ -29,14 +28,12 @@ h3 {
 }
 
 p {
-  font-size: 1.125rem;
-  font-weight: 400;
+  @include fontSize-weight(1.125rem, 400);
   max-width: 100%;
 }
 
 .p-italic {
-  font-size: 1.125rem;
-  font-weight: 400;
+  @include fontSize-weight(1.125rem, 400);
   font-style: italic;
   box-sizing: border-box;
 }
